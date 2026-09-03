@@ -1,0 +1,1 @@
+//javascriptの基礎記述
