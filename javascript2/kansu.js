@@ -53,9 +53,15 @@ console.log(add(x,y));
 function add(x,y){
     return x * y //returnのあとにデータがあったら処理した状態で、関数の外に渡す。
 };
+price = 1000;
 
+let total = tax(price);
 
+function tax(price){
+  return price * 1.1
+}
 
+console.log(total);
 
 
 
