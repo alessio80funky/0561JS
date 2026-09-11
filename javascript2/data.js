@@ -67,7 +67,7 @@ let text;
 
 //参照型は、オブジェクトや配列などの複雑なデータ型です。
 
-//- オブジェクト型（Object）=>を様々なデータを持つデータ型。
+//- オブジェクト型（Object）=>様々なデータを持つデータ型。
 
 let user = {
 //  キー    　値
@@ -133,4 +133,18 @@ console.log(person2)//{ name: '太郎', age: 25, address: { city: 'osaka' } }
 
 console.log(person2.address.city)//osaka
 
+
+//Javascriptの記述方法
+
+/**
+ 
+ * ①キャメルケース　＝＞　lastName =>  関数と変数によく使われますあとはメソッド
+ 
+ * ②スネークケース　＝＞　last_name =>  定数名によく使われます
+
+ * ③パスカルケース　＝＞　LastName =>  クラス名という特殊な関数につかわれます。（この講座では取り扱わない）
+ 
+ * ④ケバブケース　＝＞　last-name => HTMLのidやclassそしてCSSの記述にも使われます
+
+ */
 
