@@ -1,7 +1,7 @@
 //DOM操作 get系
 
 /**
- * 1. getElementById()
+ * 1. getElementById()✅
  * id属性で1つの要素を取得する
  */
 
@@ -28,7 +28,7 @@ const para = document.getElementsByTagName("p");
 para[1].style.fontWeight = "bold"; // 最初の段落を太字にする
 
 /**
- 
+ * 4.querySelector()✅
  * CSSセレクタで最初の一致要素を取得する
  */
 
