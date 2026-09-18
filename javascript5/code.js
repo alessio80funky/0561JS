@@ -1,3 +1,2 @@
-
-let x = 12345;
-console.log(text.toUpperCase())
+let text = "123456";
+console.log(text.toUpperCase());
