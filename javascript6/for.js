@@ -54,3 +54,25 @@ for(let k = 0; k < 10; k++){
 
     console.log(k)
 }
+
+//補足：
+
+//for...in文（オブジェクトにしかつかわれない）
+//オブジェクトのプロパティを一個ずつを取り出すための命令です
+const user = { 
+    name: "josh",
+    age:45,
+    city:"New York"
+};
+
+for(const i in user){
+    console.log(`${i}:${user[i]}`);
+};
+
+//for...of(配列にしかつかわれない）
+
+const fruits = ["apple","banana","cherry"]
+
+for(const f of fruits){
+    console.log(f);
+};

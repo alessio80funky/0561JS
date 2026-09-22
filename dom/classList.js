@@ -1,4 +1,5 @@
-/**
+//✅
+/*
  * 1. .classList.add("active")
  * 指定したクラスを追加する
  */
@@ -15,7 +16,7 @@ box.classList.add("active"); // <div class="box active">
 box.classList.remove("hidden"); // hiddenクラスを削除
 
 
-/** ✅
+/** 
  * 3. .classList.toggle("open")
  * クラスの ON/OFF を切り替える（クリックで）
  */
