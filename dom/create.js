@@ -6,7 +6,7 @@
 
 const codomo = document.createElement("div"); // <div></div> を作成
 codomo.textContent = "新しく作ったボックス"; // テキストを追加
-codomo.style.background = "lightblue";
+codomo.style.background = "coral";
 codomo.style.padding = "30px";
 
 /**
