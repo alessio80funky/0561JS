@@ -1,5 +1,5 @@
 /**
- * 1. createElement("div")
+ * 1. createElement("div")✅
  * 新しい要素を作成する。
  * ※作成しただけでは、まだ画面には表示されない！
  */
@@ -10,7 +10,7 @@ codomo.style.background = "coral";
 codomo.style.padding = "30px";
 
 /**
- * 2. appendChild(子要素)
+ * 2. appendChild(子要素)✅
  * 親要素の最後に子要素を追加する。
  */
 

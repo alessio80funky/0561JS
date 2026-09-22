@@ -15,6 +15,8 @@ const color = document.querySelector("#colorPicker");
 
 function colorCode(){
     text.textContent = `カラーコード：${color.value}`;
+
+    document.body.style.backgroundColor = color.value;
 }
 
 color.addEventListener("input", colorCode);

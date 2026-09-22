@@ -1,5 +1,5 @@
 /**
- * 1. .textContent
+ * 1. .textContent✅
  * テキストのみを取得・変更できるプロパティ　（インスタンスプロパティ）
  * HTMLタグは解釈されず、単なる文字列として扱われる
  */
@@ -38,7 +38,7 @@ const srcValue = img.getAttribute("src");
 console.log("画像のsrc属性は：" + srcValue);
 
 /**
- * 5. .style.プロパティ　（インスタンスプロパティ）
+ * 5. .style.プロパティ　（インスタンスプロパティ）✅
  * 要素のCSSを直接変更できる
  * 例：el.style.color = "red";
  */
