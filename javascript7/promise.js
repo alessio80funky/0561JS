@@ -1,5 +1,7 @@
 ///非同期処理
 
+const console = require("console");
+
 //.then()
 
 /*
@@ -63,3 +65,22 @@ const options = {
 })
 
 //async/await
+try{
+async function load(){
+    const res = await fetch("url data")
+    const data = await res.json()
+
+    console.log(data)
+}
+
+}catch(err){
+    console.log("メッセージ" + err.message)
+}
+
+
+/*
+例：
+fetch("./url")///外部のURLにつかう
+.then( x => x.json())
+.then(data => console.log(data))
+.catch(err => console.log(err))*/

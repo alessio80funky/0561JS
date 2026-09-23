@@ -5,8 +5,48 @@ const ten = document.getElementById("tenki")
 const loading = document.querySelector("#loading");
 
 
-window.addEventListener("load", function(){
+window.addEventListener("load", async function(){
 
+try{
+    const res = await fetch("https://api.open-meteo.com/v1/forecast?latitude=34.69&longitude=135.50&current=temperature_2m,weather_code")
+    //if(!res.ok){
+        //throw new Error(`HTTPエラー：${res.status}`)
+    //}
+    const data = await res.json()
+    
+        const options = {
+  weekday: "long",
+  year: "numeric",
+  month: "long",
+  day: "numeric",
+};
+
+   hour.textContent += `${new Date().toLocaleDateString("ja-JP",options)}`;
+   template.textContent += `大阪市 ℃ ${data.current.temperature_2m} `
+
+
+   if(data.current.temperature_2m >= 24.5 && data.current.temperature_2m <= 30.0){
+      text.textContent += "過ごしやすい"
+      ten.style.backgroundImage = "url('./hot.jpg')"
+      ten.style.width = "120px"
+      ten.style.backgroundSize = "cover"
+      ten.style.backgroundPosition = "center"
+
+   }else if(data.current.temperature_2m >= 15.0 && data.current.temperature_2m <= 24.4){
+      text.textContent += "良い"
+      ten.style.backgroundImage = "url('./nice.jpg')"
+      ten.style.width = "120px"
+      ten.style.backgroundSize = "cover"
+      ten.style.backgroundPosition = "center"
+   }
+}catch(error){
+     console.log("メッセージ：" + error.message)
+}finally{
+    loading.remove();
+}
+
+})
+/*
 fetch("https://api.open-meteo.com/v1/forecast?latitude=34.69&longitude=135.50&current=temperature_2m,weather_code")
 .then(function(tenki){
     return tenki.json()
@@ -45,8 +85,9 @@ const options = {
 .finally(function(){
     loading.remove()
 })
+}
+*/
 
 
-});
 
 
