@@ -3,15 +3,18 @@ const hour= document.getElementById("hour");
 const text= document.getElementById("text");
 const ten = document.getElementById("tenki")
 const loading = document.querySelector("#loading");
-
+const err = document.getElementById("error");
 
 window.addEventListener("load", async function(){
 
 try{
     const res = await fetch("https://api.open-meteo.com/v1/forecast?latitude=34.69&longitude=135.50&current=temperature_2m,weather_code")
-    //if(!res.ok){
-        //throw new Error(`HTTPエラー：${res.status}`)
-    //}
+    if(!res.ok){
+        throw new Error(
+            err.textContent =`HTTPエラー：${res.status}`,
+            err.style.color = "red"
+        )
+    }
     const data = await res.json()
     
         const options = {
@@ -40,7 +43,8 @@ try{
       ten.style.backgroundPosition = "center"
    }
 }catch(error){
-     console.log("メッセージ：" + error.message)
+     err.textContent = "メッセージ：" + error.message
+     err.style.color = "red"
 }finally{
     loading.remove();
 }
