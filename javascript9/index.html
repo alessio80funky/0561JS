@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kakeibo V1.1.0</title>
+    <link rel="stylesheet" href="./css/style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.5.1/dist/chart.umd.min.js"></script>
+</head>
+<body>
+
+    <div id="loading">
+    <img src="./img/6-dots-scale-middle.svg" class="spinner" width="200" height="auto">
+</div>
+
+<div class="main-container">
+
+<div class="summary-container">
+<div class="summary-item">
+<span class="label">収入</span>
+<span class="income" id="totalIncome">0</span>
+</div>
+<div class="summary-item">
+<span class="label">支出</span>
+<span class="expense" id="totalExpense">0</span>
+</div>
+<div class="summary-item">
+<span class="label">合計</span>
+<span class="balance" id="totalBalance">0</span>
+</div>
+</div>
+
+<div class="form-container">
+   <form id="transactionForm">
+    <h2>取引を追加</h2>
+
+    <div class="form-group">
+        <label for="description">取引の内容</label>
+        <input type="text" placeholder="例：ランチ代など" id="description" required></input>
+    </div>
+
+     <div class="form-group">
+        <label for="amount">取引の金額</label>
+        <input type="number" placeholder="例：1000" id="amount" required></input>
+    </div>
+
+     <div class="form-group">
+        <label for="description">取引の種類</label>
+        <select id="type">
+            <option value="expense">支出</option>
+             <option value="income">収入</option>
+        </select>
+    
+    <button  type="submit" class="btn-submit">追加</button>
+        
+    </div>
+
+   </form> 
+
+</div>
+
+<div class="graph-container">
+    <h1 id="title"></h1>
+    <div id="error"></div>
+    <canvas id="Chart" width="400" height="200"></canvas>
+    <button class="graph-btn" id="btn">グラフを表示</button>
+    <input type="button" class="reload" value="リロード" onclick="window.location.reload()">
+</div>
+
+<div class="transaction-container">
+<h2>取引履歴</h2>
+<ul class="transaction-list" id="transactionList"></ul>
+
+</div>
+
+
+</div>
+
+    <script src="./js/script.js"></script>
+    
+</body>
+</html>
